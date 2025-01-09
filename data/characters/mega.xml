@@ -1,8 +1,15 @@
 <!DOCTYPE codename-engine-character>
 <character sprite="mega/mega" scale="6" antialiasing="false" icon="mega">
-	<anim name="idle" anim="Angry Senpai Idle instance0" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singDOWN" anim="Angry Senpai DOWN NOTE instance0" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singLEFT" anim="Angry Senpai LEFT NOTE instance0" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singRIGHT" anim="Angry Senpai RIGHT NOTE instance0" x="0" y="0" fps="24" loop="false"/>
-	<anim name="singUP" anim="Angry Senpai UP NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="idle" anim="Senpai Idle instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="SENPAI DOWN NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="SENPAI LEFT NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="SENPAI RIGHT NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="SENPAI UP NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+
+	
+	<anim name="idle-alt" anim="Angry Senpai Idle instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN-alt" anim="Angry Senpai DOWN NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT-alt" anim="Angry Senpai LEFT NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT-alt" anim="Angry Senpai RIGHT NOTE instance0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP-alt" anim="Angry Senpai UP NOTE instance0" x="0" y="0" fps="24" loop="false"/>
 </character>

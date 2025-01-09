@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/weeb/" zoom="1.05">
+	<sprite x="407" antialiasing="false" y="216" sprite="animatedEvilSchool" scale="6" name="animatedEvilSchool"/>
+	<character name="mega-spirit" x="100" y="200"/>
+	<gf x="570" y="17"/>
+	<dad x="-101" lastOpponent="flippy" y="414"/>
+	<bf x="1024" lastPlayer="bf-pixel" y="165" camxoffset="-200"/>
+	<combo/>
+</stage>

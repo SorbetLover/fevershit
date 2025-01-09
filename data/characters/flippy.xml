@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="flippy/flippy" scale="6" antialiasing="false" icon="flippy">
+	<anim name="idle" anim="FLIPPY IDLE0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="FLIPPY DOWN0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="FLIPPY LEFT0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="FLIPPY RIGHT0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="FLIPPY UP0" x="0" y="0" fps="24" loop="false"/>
+</character>

@@ -1,0 +1,17 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 100,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -196351,
+	"displayName": "Chicken-Sandwich",
+	"icon": "mega-real",
+	"name": "chicken-Sandwich",
+	"color": "#FD0101",
+	"customValues": {}
+}

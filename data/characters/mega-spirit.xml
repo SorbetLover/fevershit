@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="flippy/meat" scale="6" antialiasing="false" icon="flippy" color="#FF7200">
+	<anim name="singDOWN" anim="MEATDOWN0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="idle" anim="MEATIDLE" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="MEATLEFT0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="MEATRIGHT0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="MEATUP0" x="0" y="0" fps="24" loop="false"/>
+</character>

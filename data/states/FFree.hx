@@ -2,7 +2,10 @@ var peeps:FunkinSprite;
 var classic:FlxSprite;
 var frenzy:FlxSprite;
 function create(){
-	
+		if(FlxG.sound.music.playing == false){
+			CoolUtil.playMenuSong(false);
+			FlxG.sound.music.volume = 0.6;
+		}
 	FlxG.save.data.INSS = false;
 	bg = new FunkinSprite().loadGraphic(Paths.image("f/freeplay/bg"));
 	add(bg);
