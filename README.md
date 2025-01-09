@@ -11,13 +11,13 @@
 
 ### classic
 - Down Bad (Finished)
-
+- Star Baby & Last Meow
 - Week 6 (Ur Girl, Chicken Sandwich, Funkin God)
 
 ### frenzy
 - Mechanical
 - Gears, W00F, Cosmic Swing, DUI, Tranquility (waiting to be transfered from [alloyshit](https://github.com/sorbetlover/alloyshit))
-
+  
 ## characters
 ### Fever
 - classic
@@ -37,4 +37,6 @@
 - cherry pixel
 - flippy
 - mega spirit
+- wee
+- wee feral
   
