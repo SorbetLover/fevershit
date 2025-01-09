@@ -16,7 +16,7 @@ a little port of fever to codename, prob wont make all songs.
 
 ### frenzy
 - Mechanical
-- Gears, W00F, Cosmic Swing, DUI, Tranquility (waiting to be transfered from [alloyshit](https://github.com/sorbetlover/alloyshit)
+- Gears, W00F, Cosmic Swing, DUI, Tranquility (waiting to be transfered from [alloyshit](https://github.com/sorbetlover/alloyshit))
 
 ## characters
 ### Fever
