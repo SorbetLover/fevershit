@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/weeb/" zoom="0.9">
+	<combo/>
+	<sprite name="weebSky" sprite="weebSky" scale="6" antialiasing="false"/>
+	<sprite antialiasing="false" scale="6" name="weebSchool" sprite="weebSchool"/>
+	<sprite antialiasing="false" scale="6" name="weeboverlay" sprite="weeboverlay"/>
+	<sprite antialiasing="false" scale="6" name="weebStreet" sprite="weebStreet"/>
+	<!-- <sprite antialiasing="false" x="0" sprite="weebfront" y="0" scale="6" name="weebfront"/> -->
+	<gf x="125" y="0" scroll="1"/>
+	<bf x="601" camxoffset="-200" y="-212" camyoffset="-50" lastPlayer="bf-pixel"/>
+	<dad x="-306" camxoffset="100" y="-150" camyoffset="-30" lastOpponent="mega"/>
+</stage>

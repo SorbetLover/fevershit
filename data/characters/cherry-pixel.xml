@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="cherryPixel" scale="6" antialiasing="false" icon="cherry">
+	<anim name="danceLeft" anim="GF IDLE0" x="0" y="0" fps="24" loop="false" indices="0..14"/>
+	<anim name="danceRight" anim="GF IDLE0" x="0" y="0" fps="24" loop="false" indices="15..29"/>
+</character>

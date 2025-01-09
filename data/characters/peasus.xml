@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="peaky_horny" icon="peasus" camx="300">
+<character sprite="peaky_horny" camx="300" icon="peasus" color="#9C9C9C">
 	<anim name="idle" anim="Dad idle dance0" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="Dad Sing Note DOWN0" x="-225" y="-5" fps="24" loop="false"/>
 	<anim name="singRIGHT" anim="Dad Sing Note RIGHT0" x="-185" y="20" fps="24" loop="false"/>

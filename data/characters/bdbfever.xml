@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="fever/BDBFEVER" scale="6" antialiasing="false" flipX="true" isPlayer="true" icon="bdbfever" color="#7E32B1">
+	<anim name="idle" anim="BDBIdle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="BDBDown0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="BDBHey" anim="BDBHey0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="BDBLeft0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="BDBMISSDown0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFTmiss" anim="BDBMISSLeft0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="BDBMISSRight0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="BDBMISSUp0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="BDBRight0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="BDBUp0" x="0" y="0" fps="24" loop="false"/>
+</character>

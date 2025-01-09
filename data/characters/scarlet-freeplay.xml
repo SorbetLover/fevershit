@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character sprite="scarletfreeplay" camx="-170" camy="-13" icon="scarlet" isGF="false">
+<character sprite="scarletfreeplay" camx="-170" camy="-13" icon="scarlet" color="#FF8DF0" isGF="false">
 	<anim name="idle" anim="scarlet idle" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="scarlet left" x="42" y="-8" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="scarlet down" x="3" y="-14" fps="24" loop="false"/>
