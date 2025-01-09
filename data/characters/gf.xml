@@ -1,6 +1,9 @@
 <!DOCTYPE codename-engine-character>
 <character y="350" sprite="GF_assets" icon="gf" isGF="true">
-	<anim name="idle" anim="GF Dancing Beat0" x="0" y="0" fps="24" loop="false"/>
+	<!-- <anim name="idle" anim="GF Dancing Beat0" x="0" y="0" fps="24" loop="false"/> -->
+	<anim name="danceLeft" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" anim="GF Dancing Beat0" x="0" y="0" fps="24" loop="false"/> 
+	<anim name="danceRight" indices="16,17,18,19,20,21,22,23,24,25,26,27,28,29" anim="GF Dancing Beat0" x="0" y="0" fps="24" loop="false"/>
+	
 	<anim name="GF Cheer" anim="GF Cheer0" x="0" y="10" fps="24" loop="false"/>
 	<anim name="GF Dancing Beat Hair Landing" anim="GF Dancing Beat Hair Landing0" x="0" y="0" fps="24" loop="false"/>
 	<anim name="GF Dancing Beat Hair blowing" anim="GF Dancing Beat Hair blowing0" x="0" y="0" fps="24" loop="false"/>

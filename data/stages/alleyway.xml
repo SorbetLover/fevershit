@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/roboStage/" zoom="0.8">
+	<sprite x="-702" name="alleyway" sprite="alleyway" y="-252"/>
+	<gf x="272" y="-343"/>
+	<dad x="-101" y="206" lastOpponent="scarlet" />
+	<bf x="745" y="220" lastPlayer="bf-casual" camxoffset="-200"/>
+	<combo/>
+</stage>

@@ -13,8 +13,8 @@ var weeks:Array = [
 		["Down-Horrendous", "peasus"]
 	],
 	["week2",
-		["Star-Baby", "spooky"],
-		["Last-Meow", "feralspooky"],
+		["Star-Baby", "wee"],
+		["Last-Meow", "weeferal"],
 		["Bazinga", "taki"],
 		["Crucify", "taki"]
 	],
