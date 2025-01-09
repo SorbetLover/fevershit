@@ -25,6 +25,7 @@ a little port of fever to codename, prob wont make all songs.
 - pixel classic
 - pixel demon
 - mechanical 
+- BDB
 ### Tea
 - classic
 - pixel
@@ -33,4 +34,7 @@ a little port of fever to codename, prob wont make all songs.
 - Mega
 - Scarlet Mechanical
 - Pepper Mechanical
-- 
+- cherry pixel
+- flippy
+- mega spirit
+  
