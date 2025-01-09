@@ -1,0 +1,17 @@
+{
+	"opponentModeAllowed": false,
+	"icon": "face",
+	"difficulties": [
+		"HARD"
+	],
+	"parsedColor": -7179779,
+	"customValues": {},
+	"color": "#9271FD",
+	"name": "star-baby",
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"displayName": "star-baby",
+	"beatsPerMeasure": 4,
+	"needsVoices": true,
+	"bpm": 180
+}

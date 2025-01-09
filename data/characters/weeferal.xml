@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="feral_wee_assets" icon="weeferal" color="#1F1F1F">
+	<anim name="idle" anim="feral dance idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="feral note sing left0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="feral DOWN note0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="feral UP NOTE0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="feral sing right0" x="0" y="0" fps="24" loop="false"/>
+</character>

@@ -1,14 +1,15 @@
 <!DOCTYPE codename-engine-character>
-<character y="350" sprite="BOYFRIEND" flipX="true" isPlayer="true" icon="bf" color="#E268FB">
-	<anim name="idle" anim="BF idle dance" x="-5" y="0" fps="24" loop="false"/>
-	<anim name="singUP" anim="BF NOTE UP0" x="-29" y="27" fps="24" loop="false"/>
-	<anim name="singLEFT" anim="BF NOTE LEFT0" x="12" y="-6" fps="24" loop="false"/>
-	<anim name="singRIGHT" anim="BF NOTE RIGHT0" x="-38" y="-7" fps="24" loop="false"/>
-	<anim name="singDOWN" anim="BF NOTE DOWN0" x="-10" y="-50" fps="24" loop="false"/>
-	<anim name="singUPmiss" anim="BF NOTE UP MISS" x="-29" y="27" fps="24" loop="false"/>
-	<anim name="singLEFTmiss" anim="BF NOTE LEFT MISS" x="12" y="24" fps="24" loop="false"/>
-	<anim name="singRIGHTmiss" anim="BF NOTE RIGHT MISS" x="-30" y="21" fps="24" loop="false"/>
-	<anim name="singDOWNmiss" anim="BF NOTE DOWN MISS" x="-11" y="-19" fps="24" loop="false"/>
-	<anim name="hey" anim="BF HEY" x="7" y="4" fps="24" loop="false"/>
-	<anim name="scared" anim="BF idle shaking" x="-4" y="0" fps="24" loop="true"/>
+<character y="350" sprite="fever/fever" flipX="true" isPlayer="true" icon="bf">
+	<anim name="idle" anim="fever idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="fever dodge" anim="fever dodge0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="fever down0" x="0" y="-80" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="fever down miss0" x="3" y="-80" fps="24" loop="false"/>
+	<anim name="fever fear" anim="fever fear0" x="-8" y="0" fps="24" loop="false"/>
+	<anim name="fever hey" anim="fever hey0" x="-10" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="fever left0" x="35" y="-2" fps="24" loop="false"/>
+	<anim name="singLEFTmiss" anim="fever left miss0" x="30" y="-5" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="fever right0" x="-29" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="fever right miss0" x="-35" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="fever up0" x="-35" y="-10" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="fever up miss0" x="-31" y="-15" fps="24" loop="false"/>
 </character>

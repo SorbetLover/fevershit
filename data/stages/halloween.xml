@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/week2/" zoom="0.6">
+	<sprite x="-745" y="-152" sprite="city" scrollx="1.05" name="city"/>
+	<combo/>
+	<sprite x="-738" y="-196" sprite="spooky" name="spooky"/>
+	<gf x="174" y="-235" scroll="1"/>
+	<bf x="906" lastPlayer="bf" y="24" camyoffset="-100" camxoffset="-400"/>
+	<dad x="-563" lastOpponent="wee" y="-149" camxoffset="200" camyoffset="100"/>
+</stage>
