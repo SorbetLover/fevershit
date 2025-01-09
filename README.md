@@ -12,7 +12,7 @@ a little port of fever to codename, prob wont make all songs.
 ### classic
 - Down Bad (Finished)
 
-- Ur Girl (WIP)
+- Week 6 (Ur Girl, Chicken Sandwich, Funkin God)
 
 ### frenzy
 - Mechanical
