@@ -1,0 +1,19 @@
+<!DOCTYPE codename-engine-stage>
+<stage zoom="1.1" name="tank" folder="stages/feverrestaurant/">
+
+	<sprite name="bg" x="0" y="0" sprite="bg" scroll="0.99" zoomfactor="1"/>
+	<!-- CHARACTERS -->
+	<girlfriend x="-600" y="0" scale="0.7"/>
+	<sprite name="bgchair" x="0" y="0" sprite="frontChairs" scroll="0.99" zoomfactor="1"/>
+	<boyfriend x="800" y="-260"/>
+	<sprite name="tabl" x="260" y="400" sprite="table" scroll="0.99" zoomfactor="1"/>
+
+	<dad x="200" y="297" />
+
+	<sprite name="tabl2" alpha="1" x="260" y="400" sprite="table" scroll="0.99" zoomfactor="1"/>
+	<sprite name="hand1" x="270" y="370" sprite="hands" scroll="0.99"  scale="0.7" zoomfactor="0.99" alpha="0" type="1">
+		<anim name="shit" anim="scarlet hands" loop="false" indices="0,1,2,3,4" fps="12"/>
+		<anim name="shit2" anim="scarlet hands" loop="false" indices="4"  />
+	</sprite>
+	
+</stage>

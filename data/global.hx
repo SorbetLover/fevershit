@@ -1,6 +1,7 @@
 var redirectStates:Map<FlxState, String> = [
     TitleState => "FTitle",
-    MainMenuState => "FMenu"
+    MainMenuState => "FMenu",
+    FreeplayState => "FFree"
 ];
 
 function preStateSwitch() {

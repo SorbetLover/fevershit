@@ -6,7 +6,7 @@
 	<SubTexture name="footer" x="0" y="100" width="437" height="13"/>
 	<SubTexture name="week1" x="1" y="199" width="165" height="177"/>
 	<SubTexture name="week2" x="2" y="378" width="194" height="154"/>
-	<SubTexture name="week2.5" x="197" y="199" width="183" height="189"/>
+	<SubTexture name="weektaki" x="197" y="199" width="183" height="189"/>
 	<SubTexture name="week3" x="198" y="390" width="177" height="178"/>
 	<SubTexture name="week4" x="438" y="0" width="199" height="215"/>
 	<SubTexture name="week5" x="381" y="216" width="194" height="186"/>

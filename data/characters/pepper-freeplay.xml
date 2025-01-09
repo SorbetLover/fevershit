@@ -1,0 +1,14 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="pepperfreeplay" icon="pepper" color="#7211FF" isGF="false">
+	<anim name="idle" anim="pepper idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="pepper left0" x="18" y="-3" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="pepper down0" x="-3" y="-6" fps="24" loop="false"/>
+	<anim name="singUP" anim="pepper up0" x="-2" y="13" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="pepper right0" x="-18" y="-2" fps="24" loop="false"/>
+	<anim name="pepper pull trumpet" anim="pepper pull trumpet0" x="28" y="100" fps="24" loop="false"/>
+	<anim name="idle-alt" anim="pepper idle TRUMPET0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT-alt" anim="pepper leftTRUMPET0" x="28" y="-3" fps="24" loop="false"/>
+	<anim name="singDOWN-alt" anim="pepper down TRUMPET0" x="-3" y="-6" fps="24" loop="false"/>
+	<anim name="singUP-alt" anim="pepper up TRUMPET0" x="0" y="16" fps="24" loop="false"/>
+	<anim name="singRIGHT-alt" anim="pepper right TRUMPET0" x="-18" y="-1" fps="24" loop="false"/>
+</character>

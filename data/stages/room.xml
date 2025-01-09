@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/room/" zoom="0.8">
+	<sprite x="-369" y="1089" sprite="stagefront" scale="1.5" name="stagefront"/>
+	<sprite x="-338" y="13" sprite="stagecurtains" name="stagecurtains"/>
+	<gf x="578" y="101" scroll="1"/>
+	<dad x="176" lastOpponent="peasus" y="506" scroll="1"/>
+	<bf x="1308" lastPlayer="bf-demon" y="322" scroll="1"/>
+	<combo/>
+</stage>

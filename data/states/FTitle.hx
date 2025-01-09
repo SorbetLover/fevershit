@@ -19,9 +19,11 @@ var ngSpr:FlxSprite;
 var steps = 0;
 function create() {
 	Conductor.changeBPM(120);
-	if(!initialized)
-		CoolUtil.playMenuSong(true);
-	
+	if(!initialized){
+
+		CoolUtil.playMenuSong(false);
+		FlxG.sound.music.volume = 0.5;
+    }
 	FlxG.mouse.visible = false;
 
 	textGroup = new FlxGroup();
@@ -101,6 +103,7 @@ function create() {
 
 	add(textGroup);
 	Conductor.changeBPM(120);
+
 
 }
 function stepHit(curStep) {

@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character y="350" sprite="GF_assets" icon="gf" isGF="true">
+	<anim name="idle" anim="GF Dancing Beat0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="GF Cheer" anim="GF Cheer0" x="0" y="10" fps="24" loop="false"/>
+	<anim name="GF Dancing Beat Hair Landing" anim="GF Dancing Beat Hair Landing0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="GF Dancing Beat Hair blowing" anim="GF Dancing Beat Hair blowing0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="GF Down Note0" x="0" y="-9" fps="24" loop="false"/>
+	<anim name="GF FEAR " anim="GF FEAR 0" x="0" y="-4" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="GF Right Note0" x="0" y="-7" fps="24" loop="false"/>
+	<anim name="singUP" anim="GF Up Note0" x="0" y="25" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="GF left note0" x="0" y="-10" fps="24" loop="false"/>
+	<anim name="gf sad" anim="gf sad0" x="0" y="-15" fps="24" loop="false"/>
+</character>
