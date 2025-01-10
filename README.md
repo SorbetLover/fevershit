@@ -1,4 +1,4 @@
-a little port of fever to codename, prob wont make all songs.
+ a little port of fever to codename, prob wont make all songs.
 
 # shit done
 
@@ -11,13 +11,13 @@ a little port of fever to codename, prob wont make all songs.
 
 ### classic
 - Down Bad (Finished)
-
+- Star Baby & Last Meow
 - Week 6 (Ur Girl, Chicken Sandwich, Funkin God)
 
 ### frenzy
 - Mechanical
 - Gears, W00F, Cosmic Swing, DUI, Tranquility (waiting to be transfered from [alloyshit](https://github.com/sorbetlover/alloyshit))
-
+  
 ## characters
 ### Fever
 - classic
@@ -25,6 +25,7 @@ a little port of fever to codename, prob wont make all songs.
 - pixel classic
 - pixel demon
 - mechanical 
+- BDB
 ### Tea
 - classic
 - pixel
@@ -33,4 +34,9 @@ a little port of fever to codename, prob wont make all songs.
 - Mega
 - Scarlet Mechanical
 - Pepper Mechanical
-- 
+- cherry pixel
+- flippy
+- mega spirit
+- wee
+- wee feral
+  
