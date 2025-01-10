@@ -3,9 +3,9 @@
 	<anim name="idle" anim="Scar Idle0" x="0" y="0" fps="24" loop="false"/>
 	<anim name="laugh" anim="Scar Laugh0" x="110" y="5" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="Scar down0" x="50" y="-100" fps="24" loop="false"/>
-	<anim name="Scar hey" anim="Scar hey0" x="15" y="0" fps="24" loop="false"/>
+	<anim name="hey" anim="Scar hey0" x="15" y="0" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="Scar left0" x="65" y="-45" fps="24" loop="false"/>
 	<anim name="singRIGHT" anim="Scar right0" x="45" y="-90" fps="24" loop="false"/>
-	<anim name="Scar transform" anim="Scar transform0" x="320" y="275" fps="24" loop="false"/>
+	<anim name="trans" anim="Scar transform0" x="320" y="275" fps="24" loop="false"/>
 	<anim name="singUP" anim="Scar up0" x="60" y="55" fps="24" loop="false"/>
 </character>

@@ -4,5 +4,7 @@
 	<gf x="272" y="-343" scroll="1"/>
 	<dad x="-101" y="206" lastOpponent="scarlet" scroll="1"/>
 	<bf x="745" y="220" lastPlayer="bf-casual" camxoffset="-200" scroll="1"/>
+	<character name="scarlet-final" x="-500" y="-300" camyoffset="100" />
+	
 	<combo/>
 </stage>

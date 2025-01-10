@@ -1,15 +1,17 @@
 {
+	"beatsPerMeasure": 4,
 	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 128,
 	"difficulties": [
 		"HARD"
 	],
-	"icon": "face",
-	"parsedColor": -7179779,
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "funkin-god",
 	"needsVoices": true,
-	"beatsPerMeasure": 4,
-	"bpm": 128,
-	"name": "funkin-god"
+	"parsedColor": -7179779,
+	"displayName": "funkin-god",
+	"icon": "flippy",
+	"name": "funkin-god",
+	"color": "#9271FD",
+	"customValues": {}
 }

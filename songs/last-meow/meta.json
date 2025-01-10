@@ -1,15 +1,17 @@
 {
+	"beatsPerMeasure": 4,
 	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 180,
 	"difficulties": [
 		"HARD"
 	],
-	"icon": "face",
-	"parsedColor": -7179779,
-	"coopAllowed": false,
-	"stepsPerBeat": 4,
-	"displayName": "last-meow",
 	"needsVoices": true,
-	"beatsPerMeasure": 4,
-	"bpm": 180,
-	"name": "last-meow"
+	"parsedColor": -7179779,
+	"displayName": "last-meow",
+	"icon": "weeferal",
+	"name": "last-meow",
+	"color": "#9271FD",
+	"customValues": {}
 }

@@ -1,3 +1,6 @@
+import funkin.backend.shaders.WiggleEffect.WiggleEffectType;
+import funkin.backend.shaders.WiggleEffect;
+import openfl.filters.ShaderFilter;
 var princessBG:FlxSprite;
 var princessFloor:FlxSprite;
 var princessCrystals:FlxSprite;
@@ -35,6 +38,43 @@ function create(){
 		}
 		FlxTween.tween(princessCrystals, {y: princessCrystals.y - 70}, 3.4, {type: FlxTweenType.PINGPONG});
 	}
+	if (PlayState.instance.curSong.toLowerCase() == "bloom")
+	{
+		clocks = new FlxSprite(200, 80).loadGraphic(Paths.image("stages/roboStage/princessClocks"));
+		clocks.scale.set(2.55, 2.55);
+		clocks.antialiasing = true;
+		clocks.visible = false;
+
+		clockScar = new FlxSprite(-190, 680).loadGraphic(Paths.image("stages/roboStage/princessClock"));
+		clockScar.scale.set(1.65, 1.65);
+		clockScar.antialiasing = true;
+		clockScar.visible = false;
+
+		clockFever = new FlxSprite(990, 695).loadGraphic(Paths.image("stages/roboStage/princessClock"));
+		clockFever.scale.set(1.25, 1.25);
+		clockFever.antialiasing = true;
+		clockFever.visible = false;
+
+	wiggleEffect = new WiggleEffect();
+	wiggleEffect.effectType = WiggleEffectType.DREAMY;
+	wiggleEffect.waveAmplitude = 0.01;
+	wiggleEffect.waveFrequency = 2;
+	wiggleEffect.waveSpeed = 1;
+
+		clocks.shader = wiggleEffect.shader;
+		// setGlobalVar("shader", wiggleEffect.shader);
+		// setGlobalVar("bgElements", [clocks, clockScar, clockFever]);
+		dad.color = 0xFFA569BC;
+		boyfriend.color = 0xFFA569BC;
+		for(ee in [clocks, clockScar, clockFever]) insert(members.indexOf(gf), ee);
+	}
+	if(PlayState.instance.curSong == "crack"){
+		strumLines.members[0].characters[1].alpha = 0;
+	}
+	if(PlayState.instance.curSong == "bloom"){
+		strumLines.members[0].characters[0].x -= 100;
+		strumLines.members[1].characters[0].x += 100;
+	}
 }
 
 function stepHit(curStep){
@@ -60,5 +100,14 @@ function stepHit(curStep){
 				clockScar.visible = true;
 				clockFever.visible = true;
 			}
+	
+		case "crack":
+			if(curStep == 832){
+				strumLines.members[0].characters[0].alpha = 0;
+				strumLines.members[0].characters[1].alpha = 1;
+				dad.cameraOffset = FlxPoint.weak(0,-200);
+			}
 	}
+
+
 }
