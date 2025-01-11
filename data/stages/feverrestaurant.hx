@@ -20,6 +20,8 @@ strumLines.members[2].characters[1].alpha = 0;
 		});
 		
 			dad.playAnim('shit');
+			remove(strumLines.members[2].characters[1]);
+			insert(members.indexOf(hand1) + 1, strumLines.members[2].characters[1]);
 
 		
 }
@@ -57,7 +59,7 @@ strumLines.members[2].characters[1].alpha = 0;
 // }
 
 function stepHit(curStep){
-	if(curStep == 885){
+	if(curStep == 1408){
 	strumLines.members[2].characters[1].alpha = 1;
 	strumLines.members[2].characters[0].alpha = 0;
     tabl2.alpha = 0;

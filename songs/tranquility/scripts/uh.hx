@@ -98,13 +98,7 @@ function beatHit(curBeat)
 						FlxTween.tween(i, {alpha: 0}, 0.46);
 
 					var yAdd:Int = downscroll ? -200 : 200;
-					FlxTween.tween(scoreTxt, {y: scoreTxt.y + (downscroll ? yAdd / 3.3 : 0), alpha: 0.7}, 0.4, {
-						startDelay: 0.46,
-						onComplete: function(t)
-						{
-						}
-					});
-
+					
 					FlxTween.tween(wiggleEffect, {waveAmplitude: 0}, 0.6, {startDelay: 0.46});
 
 				}

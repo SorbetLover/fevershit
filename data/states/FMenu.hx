@@ -1,4 +1,6 @@
 import funkin.editors.EditorPicker;
+
+import funkin.menus.ModSwitchMenu;
 var tunnelBG:FunkinSprite;
 var train:FunkinSprite;
 var tunnelBG2:FunkinSprite;
@@ -17,10 +19,10 @@ import funkin.options.OptionsMenu;
 var trainCame:Bool = false;
 function create(){
 
-		if(FlxG.sound.music.playing == false){
+		// if(FlxG.sound.music.playing == false){
 			CoolUtil.playMenuSong(false);
 			FlxG.sound.music.volume = 0.6;
-		}
+		// }
 		FlxG.mouse.visible = true;
 		tunnelBG = new FlxSprite().loadGraphic(Paths.image("f/newMain/subway_bg_2"));
 		add(tunnelBG);

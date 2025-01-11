@@ -40,7 +40,7 @@ function create(){
 	}
 	if (PlayState.instance.curSong.toLowerCase() == "bloom")
 	{
-		clocks = new FlxSprite(200, 80).loadGraphic(Paths.image("stages/roboStage/princessClocks"));
+		clocks = new FlxSprite(0, 80).loadGraphic(Paths.image("stages/roboStage/princessClocks"));
 		clocks.scale.set(2.55, 2.55);
 		clocks.antialiasing = true;
 		clocks.visible = false;
@@ -55,18 +55,22 @@ function create(){
 		clockFever.antialiasing = true;
 		clockFever.visible = false;
 
-	wiggleEffect = new WiggleEffect();
-	wiggleEffect.effectType = WiggleEffectType.DREAMY;
-	wiggleEffect.waveAmplitude = 0.01;
-	wiggleEffect.waveFrequency = 2;
-	wiggleEffect.waveSpeed = 1;
+		wiggleEffect = new WiggleEffect();
+		wiggleEffect.effectType = WiggleEffectType.DREAMY;
+		wiggleEffect.waveAmplitude = 0.01;
+		wiggleEffect.waveFrequency = 2;
+		wiggleEffect.waveSpeed = 1;
 
-		clocks.shader = wiggleEffect.shader;
+		// clocks.shader = wiggleEffect.shader;
 		// setGlobalVar("shader", wiggleEffect.shader);
 		// setGlobalVar("bgElements", [clocks, clockScar, clockFever]);
 		dad.color = 0xFFA569BC;
 		boyfriend.color = 0xFFA569BC;
-		for(ee in [clocks, clockScar, clockFever]) insert(members.indexOf(gf), ee);
+		// add(clocks);
+		// add(clockScar);
+		// add(clockFever);
+		
+		for(ee in [clocks, clockScar, clockFever]){ insert(members.indexOf(boyfriend), ee); ee.shader = wiggleEffect.shader;} 
 	}
 	if(PlayState.instance.curSong == "crack"){
 		strumLines.members[0].characters[1].alpha = 0;
@@ -74,9 +78,15 @@ function create(){
 	if(PlayState.instance.curSong == "bloom"){
 		strumLines.members[0].characters[0].x -= 100;
 		strumLines.members[1].characters[0].x += 100;
+		alleyway.x -= 100;
 	}
 }
-
+function update(elapsed){
+	if(PlayState.instance.curSong == "bloom"){
+		wiggleEffect.update(elapsed);
+	}
+	
+}
 function stepHit(curStep){
 	switch (PlayState.instance.curSong.toLowerCase())
 	{
@@ -88,7 +98,9 @@ function stepHit(curStep){
 				princessFloor.visible = true;
 				princessCrystals.visible = true;
 				defaultCamZoom = 0.65;
-				gf.y += 60;
+				gf.y += 140;
+				boyfriend.y += 100;
+				dad.y += 100;
 			}
 		case 'bloom':
 			if (curStep == 256)
@@ -99,6 +111,9 @@ function stepHit(curStep){
 				clocks.visible = true;
 				clockScar.visible = true;
 				clockFever.visible = true;
+				boyfriend.x += 250;
+				boyfriend.y += 25;
+			
 			}
 	
 		case "crack":
