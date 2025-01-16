@@ -1,6 +1,10 @@
 var peeps:FunkinSprite;
 var classic:FlxSprite;
 var frenzy:FlxSprite;
+
+var playingSong;
+var vocals:FlxSound;
+var instrumental:FlxSound;
 function create(){
 			CoolUtil.playMenuSong(false);
 			FlxG.sound.music.volume = 0.6;

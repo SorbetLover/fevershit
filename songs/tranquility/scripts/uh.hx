@@ -79,7 +79,7 @@ function postUpdate(elapsed){
     
     // camZooming = !movingCam;
     // trace(camZooming, movingCam);
-    trace(curCameraTarget);
+    // trace(curCameraTarget);
 }
 var game = PlayState.instance;
 function beatHit(curBeat)

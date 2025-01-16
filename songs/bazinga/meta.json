@@ -1,0 +1,17 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 190,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -194955,
+	"displayName": "bazinga",
+	"icon": "taki",
+	"name": "bazinga",
+	"color": "#FD0675",
+	"customValues": {}
+}

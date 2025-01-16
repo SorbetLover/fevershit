@@ -1,5 +1,9 @@
 import haxe.ds.ObjectMap;
 import haxe.ds.StringMap;
+import haxe.Json;
+import sys.io.File;
+import funkin.backend.assets.ModsFolder;
+
 import flixel.groups.FlxSpriteGroup;
 
 import flixel.text.FlxTextAlign;
@@ -112,13 +116,14 @@ var iconGRP:FlxSpriteGroup;
 var asdasd:FlxSprite;
 var songlist:Array = [];
 function create(){
+
 	for (file in Paths.getFolderDirectories('songs')) {
 		var uh = file.toString();
 		songlist.push(uh);
 	}
 
 
-	trace(songlist);
+	// trace(songlist);
 	offsetShit = new ObjectMap();
 	coveroffsetShit = new StringMap();
 	songGRP = new FlxSpriteGroup();
@@ -289,6 +294,11 @@ function create(){
 		finishedAnim = true;
 		// asdasd.y = 10;
 
+	uiui = new FlxText(100,100, 1000, "Press [ALT] to hear the instrumental.", 10);
+	add(uiui);
+	uiui.antialiasing = true;
+	uiui.setFormat(Paths.font("Funkin.otf"), 20);
+
 }
 
 function setupSpr(obj, anim, x, y){
@@ -416,7 +426,10 @@ function setupSong(name, weeklenght, uy, iconn){
 }
 
 var curSelected:Int = 0;
+var lastSelected = 0;
+var cursong:String;
 function update(elapsed){
+	cursong = songGRP.members[curSelected].text.toLowerCase();
 	// offs += FlxG.mouse.wheel * 100;
 	// if(finishedAnim == false){	offs = ofsobj.y;}
 	// if(FlxG.keys.justPressed.S && finishedAnim == true){
@@ -502,7 +515,7 @@ function update(elapsed){
 	asdasd.y = FlxG.height / 2;
 	
 	if(FlxG.keys.justPressed.X){
-		trace("dfiasuhdasdhjas");
+
 	}
 	if(controls.BACK){
 			close();
@@ -515,4 +528,19 @@ function update(elapsed){
 
 		}
 	}
+	if(FlxG.keys.justPressed.ALT && lastSelected != curSelected){
+		lastSelected = curSelected;
+		if(songlist.contains(songGRP.members[curSelected].text.toLowerCase())) 
+		FlxG.sound.playMusic(Paths.inst(songGRP.members[curSelected].text.toLowerCase()));
+		// trace(Json.parse(ModsFolder.currentModFolder + "/songs/" + songGRP.members[curSelected].text.toLowerCase() + "/meta.json" ));]
+		// Conductor.changeBPM(File.getContent(ModsFolder.currentModFolder + "/songs/" + cursong + "/bpm.txt"));
+		Conductor.changeBPM(File.getContent('mods/' + ModsFolder.currentModFolder + '/songs/'+ cursong + '/bpm.txt'));
+		trace("Bpm set to " + Conductor.bpm);
+		
+
+	}
+
+	uiui.y = 700;
+	uiui.x = 0;
 }
+

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/week2/" zoom="0.6">
+	<sprite x="-796" y="-440" sprite="takiBG" name="takiBG"/>
+	<gf x="450" y="-44" scroll="1"/>
+	<dad x="-410" camxoffset="300" y="-238" camyoffset="-100" lastOpponent="taki-new"/>
+	<bf x="1003" camxoffset="-150" y="160" camyoffset="-100" lastPlayer="bf"/>
+	<combo x="443" y="500"/>
+</stage>

@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="taki/taki" icon="taki" holdTime="6">
+	<anim name="idle" anim="taki idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="taki down0" x="80" y="-115" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="taki left0" x="135" y="-20" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="taki right0" x="-295" y="-30" fps="24" loop="false"/>
+	<anim name="singUP" anim="taki up0" x="-110" y="95" fps="24" loop="false"/>
+</character>
