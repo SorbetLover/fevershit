@@ -12,11 +12,13 @@
 ### classic
 - Down Bad (Finished)
 - Star Baby & Last Meow
+- Crucify, Bazinger, Prayer(WIP)
 - Week 6 (Ur Girl, Chicken Sandwich, Funkin God)
 - Space Demons
+
 ### frenzy
 - Mechanical
-- Tranquility, Princess, Crack (doing Bloom later)
+- Tranquility, Princess, Crack, Bloom
 
 - Gears, W00F, Cosmic Swing, DUI (waiting to be transfered from [alloyshit](https://github.com/sorbetlover/alloyshit))
 
@@ -46,4 +48,6 @@
 - mega spirit
 - wee
 - wee feral
-  
+- Taki New 
+
+## [stages](https://github.com/SorbetLover/fevershit/tree/main/data/stages)
