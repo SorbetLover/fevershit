@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="hallow" icon="hallow" color="#FDFDFD" holdTime="6">
+	<anim name="idle" anim="Hallow idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Hallow down0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Hallow left0" x="100" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Hallow right0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Hallow up0" x="-165" y="40" fps="24" loop="false"/>
+</character>
