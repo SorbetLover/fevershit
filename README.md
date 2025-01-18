@@ -21,6 +21,7 @@
 - Tranquility, Princess, Crack, Bloom
 
 - Gears, W00F, Cosmic Swing, DUI (waiting to be transfered from [alloyshit](https://github.com/sorbetlover/alloyshit))
+- old Soul
 
   
 ## characters
@@ -37,6 +38,7 @@
 ### Tea
 - classic
 - pixel
+- painting
 ### others
 - Peakek horny
 - Mega
@@ -49,5 +51,7 @@
 - wee
 - wee feral
 - Taki New 
+- Hallow
+
 
 ## [stages](https://github.com/SorbetLover/fevershit/tree/main/data/stages)
