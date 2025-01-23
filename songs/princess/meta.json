@@ -5,7 +5,7 @@
 	"stepsPerBeat": 4,
 	"bpm": 160,
 	"difficulties": [
-		"HARD"
+		"HARD", "alt"
 	],
 	"needsVoices": true,
 	"parsedColor": -7179779,

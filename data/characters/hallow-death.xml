@@ -1,0 +1,6 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="deathAnims/hallow" icon="sprite-icon" x="20" y="-900">
+	<anim name="firstDeath" anim="Fever dies0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="deathLoop" anim="Fever dies loop0" x="-70" y="-35" fps="24" loop="false"/>
+	<anim name="deathConfirm" anim="Fever Dead confirm0" x="-20" y="-170" fps="24" loop="false"/>
+</character>

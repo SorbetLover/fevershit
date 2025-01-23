@@ -10,6 +10,12 @@ function postCreate(){
 	wiggleEffect.waveFrequency = 3;
 	wiggleEffect.waveSpeed = 1;
     stage.getSprite("week2bghallowpainting").shader = wiggleEffect.shader;
+
+    boyfriend.gameOverCharacter = "hallow-death";
+    gameOverSong = "gameOverHallow";
+    retrySFX = "gameOver-EndHallow";
+    lossSFX = "deaths/general";
+    GameOverSubstate.script = "data/scripts/GH";
 }
 function onNoteHit(e){
     if(e.noteType == "hallow"){

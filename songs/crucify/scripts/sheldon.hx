@@ -15,8 +15,6 @@ function postCreate(){
         iee++;
     }
 
-
-
         trace(strumX, strumY);
 }
 // function onSongStart(){
