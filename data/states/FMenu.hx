@@ -17,6 +17,7 @@ var extraHB:FlxSprite;
 import funkin.options.OptionsMenu;
 
 var trainCame:Bool = false;
+
 function create(){
 
 		// if(FlxG.sound.music.playing == false){
@@ -115,7 +116,8 @@ function create(){
 			o.antialiasing = true;
 			o.updateHitbox();
 		}
-		
+
+
 
 }
 var confirmed = false;
@@ -144,6 +146,7 @@ function update(){
 		FlxG.switchState(new MainMenuState());
 
 	}
+if(FlxG.onMobile == false){
 	if(FlxG.mouse.overlaps(trainHB)){
 		if(train.getAnimName() != "sel" && confirmed == false && trainCame == true){
 			train.playAnim("sel", false);
@@ -221,4 +224,23 @@ function update(){
 		extrastxt.visible = false;
 
 	}
+}
+    if(FlxG.onMobile) for (touch in FlxG.inputs.touch.touches) {
+		if(touch.justPressed){
+			var point = new FlxPoint(touch.screenX, touch.screenY);
+				if(trainHB.overlapsPoint(point)){
+					FlxG.switchState(new StoryMenuState());			
+				}
+				if(optionsHB.overlapsPoint(point)){
+						FlxG.switchState(new OptionsMenu());			
+				}
+				if(freeplayHB.overlapsPoint(point)){
+					FlxG.switchState(new FreeplayState());
+				}
+				if(extraHB.overlapsPoint(point)){
+					
+				}
+		
+		}
+	
 }

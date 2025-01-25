@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="m_robo" icon="robo-cesar" color="#B480FF">
+	<anim name="idle" anim="m robo idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="m robo down0" x="-35" y="-110" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="m robo left0" x="-15" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="m robo right0" x="-85" y="-30" fps="24" loop="false"/>
+	<anim name="singUP" anim="m robo up0" x="-85" y="35" fps="24" loop="false"/>
+</character>

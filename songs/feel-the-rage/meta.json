@@ -1,0 +1,17 @@
+{
+	"beatsPerMeasure": 4,
+	"opponentModeAllowed": false,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"bpm": 175,
+	"difficulties": [
+		"HARD"
+	],
+	"needsVoices": true,
+	"parsedColor": -841572,
+	"displayName": "feel-the-rage",
+	"icon": "taki",
+	"name": "feel-the-rage",
+	"color": "#F3289C",
+	"customValues": {}
+}

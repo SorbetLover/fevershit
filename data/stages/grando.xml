@@ -1,0 +1,10 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/roboStage/grando/" zoom="0.7">
+	<combo/>
+	<sprite sprite="roach" name="roach"/>
+	<sprite x="707" y="-412" sprite="sky" scale="2" scrollx="0.9" name="sky"/>
+	<sprite x="151" y="-76" sprite="bg" scale="1.65" name="bg"/>
+	<gf x="1002" y="-310"/>
+	<bf x="1598" y="252" lastPlayer="bf-minus"/>
+	<dad x="609" y="87" lastOpponent="robo-minus"/>
+</stage>
