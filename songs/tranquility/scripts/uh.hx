@@ -62,6 +62,7 @@ function postCreate(){
 	stage.getSprite("alleyway").shader = wiggleEffect.shader;
 }
 var movingCam:Bool = false;
+var hmalpha:Float = 1;
 
 function postUpdate(elapsed){
 	if(!	startingSong){
@@ -80,7 +81,15 @@ function postUpdate(elapsed){
     // camZooming = !movingCam;
     // trace(camZooming, movingCam);
     // trace(curCameraTarget);
+
+	strumLines.members[0].notes.forEachAlive(function(note:Note){
+		note.alpha = hmalpha;
+    });
+	strumLines.members[1].notes.forEachAlive(function(note:Note){
+		note.alpha = hmalpha + 0.2;
+    });
 }
+var duh = 3;
 var game = PlayState.instance;
 function beatHit(curBeat)
 {
@@ -90,6 +99,9 @@ function beatHit(curBeat)
         camFollow.setPosition(11,11);
             movingCam = true;
 			FlxTween.tween(campos, {y: camFollow.y - 550}, 0.64);
+			FlxTween.num(1, 0, duh, {ease:FlxEase.linear}, function(num:Float){
+				hmalpha = num;
+			});
 			FlxTween.tween(blackScreen, {alpha: 1}, 0.58, {
 				onComplete: function(t)
 				{
@@ -130,7 +142,9 @@ function beatHit(curBeat)
             FlxTween.tween(campos, {y: campos.y + 550}, 0.01, {onComplete: function(uh:FlxTween){
                 movingCam = false;
             }});
-
+			FlxTween.num(hmalpha, 1, duh, {ease:FlxEase.linear}, function(num:Float){
+				hmalpha = num;
+			});
 		case 97:
 			var yAdd:Int = downscroll ? -200 : 200;
 			FlxTween.tween(scoreTxt, {y: scoreTxt.y - (downscroll ? yAdd / 3.3 : 0), alpha: 1}, 0.4, {

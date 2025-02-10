@@ -1,10 +1,11 @@
 <!DOCTYPE codename-engine-stage>
 <stage folder="stages/roboStage/" zoom="0.8">
 	<sprite x="-702" name="alleyway" sprite="alleyway" y="-252"/>
+	<sprite x="0"  scale="2.55" name="clocks" sprite="princessClocks" scrollx="1" y="80"/>
 	<gf x="272" y="-343" scroll="1"/>
 	<dad x="-101" y="206" lastOpponent="scarlet" scroll="1"/>
 	<bf x="745" y="220" lastPlayer="bf-casual" camxoffset="-200" scroll="1"/>
 	<character name="scarlet-final" x="-500" y="-300" camyoffset="100" />
 	
-	<combo/>
+	<combo x="10000"/>
 </stage>

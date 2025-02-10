@@ -40,10 +40,10 @@ function create(){
 	}
 	if (PlayState.instance.curSong.toLowerCase() == "bloom")
 	{
-		clocks = new FlxSprite(0, 80).loadGraphic(Paths.image("stages/roboStage/princessClocks"));
-		clocks.scale.set(2.55, 2.55);
-		clocks.antialiasing = true;
-		clocks.visible = false;
+		// clocks = new FlxSprite(0, 80).loadGraphic(Paths.image("stages/roboStage/princessClocks"));
+		// clocks.scale.set(2.55, 2.55);
+		// clocks.antialiasing = true;
+		// clocks.visible = false;
 
 		clockScar = new FlxSprite(-190, 680).loadGraphic(Paths.image("stages/roboStage/princessClock"));
 		clockScar.scale.set(1.65, 1.65);
@@ -57,9 +57,12 @@ function create(){
 
 		wiggleEffect = new WiggleEffect();
 		wiggleEffect.effectType = WiggleEffectType.DREAMY;
-		wiggleEffect.waveAmplitude = 0.01;
+		wiggleEffect.waveAmplitude = 0.05;
 		wiggleEffect.waveFrequency = 2;
 		wiggleEffect.waveSpeed = 1;
+
+		// clockFever.visible = true;
+		// clockScar.visible = true;
 
 		// clocks.shader = wiggleEffect.shader;
 		// setGlobalVar("shader", wiggleEffect.shader);
@@ -69,8 +72,8 @@ function create(){
 		// add(clocks);
 		// add(clockScar);
 		// add(clockFever);
+		for(ee in [clocks, clockScar, clockFever]){ insert(members.indexOf(boyfriend), ee); if(ee == clocks) ee.shader = wiggleEffect.shader;} 
 		
-		for(ee in [clocks, clockScar, clockFever]){ insert(members.indexOf(boyfriend), ee); ee.shader = wiggleEffect.shader;} 
 	}
 	if(PlayState.instance.curSong == "crack"){
 		strumLines.members[0].characters[1].alpha = 0;
@@ -80,6 +83,18 @@ function create(){
 		strumLines.members[1].characters[0].x += 100;
 		alleyway.x -= 100;
 	}
+	
+			clocks.visible = false;
+		
+}
+
+function postCreate(){
+	// insert(members.indexOf(clockScar) + 1, dad);
+	// remove(dad);
+	// add(dad);
+
+	remove(strumLines.members[0].characters[0]);
+	insert(members.indexOf(clockScar) + 1, strumLines.members[0].characters[0]);
 }
 function update(elapsed){
 	if(PlayState.instance.curSong == "bloom"){
@@ -115,6 +130,9 @@ function stepHit(curStep){
 				boyfriend.y += 25;
 			
 			}
+			if(curStep == 762){
+				clocks.colorTransform.color = 0xFF040504;
+			}
 	
 		case "crack":
 			if(curStep == 832){
@@ -125,4 +143,10 @@ function stepHit(curStep){
 	}
 
 
+}
+
+function beatHit(){
+	if(curBeat == 256 && PlayState.instance.curSong.toLowerCase() == "bloom"){
+		clocks.shader = wiggleEffect.shader;
+	}
 }
