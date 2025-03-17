@@ -42,12 +42,22 @@ function create()
 	// 	dddd += 1;
 	// }
 
-	Paths.getSparrowAtlas("dedsec/dedsecgif1");
-	Paths.getSparrowAtlas("dedsec/dedsecgif2");
-	Paths.getSparrowAtlas("dedsec/dedsecgif3");
-	Paths.getSparrowAtlas("dedsec/dedsecgif4");
-	Paths.getSparrowAtlas("dedsec/dedsecgif5");
-	Paths.getSparrowAtlas("dedsec/dedsecgif6");
+	// Paths.getSparrowAtlas("dedsec/dedsecgif1");
+	// Paths.getSparrowAtlas("dedsec/dedsecgif2");
+	// Paths.getSparrowAtlas("dedsec/dedsecgif3");
+	// Paths.getSparrowAtlas("dedsec/dedsecgif4");
+	// Paths.getSparrowAtlas("dedsec/dedsecgif5");
+	// Paths.getSparrowAtlas("dedsec/dedsecgif6");
+	// for(i in 1...7){
+	// 	graphicCache.cache(Paths.getSparrowAtlas("dedsec/dedsecgif" + i) );
+	// }
+	graphicCache.cache(Paths.image("dedsec/dedsecgif1"));
+	graphicCache.cache(Paths.image("dedsec/dedsecgif2"));
+	graphicCache.cache(Paths.image("dedsec/dedsecgif3"));
+	graphicCache.cache(Paths.image("dedsec/dedsecgif4"));
+	graphicCache.cache(Paths.image("dedsec/dedsecgif5"));
+	graphicCache.cache(Paths.image("dedsec/dedsecgif6"));
+
 	dedsecshit = new FlxSpriteGroup();
 	clap = new FlxSprite(dad.x - 270, dad.y - 50);
 	clap.frames = Paths.getSparrowAtlas("characters/scarlet/Scarlet_Final_Clap");

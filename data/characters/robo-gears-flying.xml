@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="robo-fever/flying" icon="robo-cesar">
+	<anim name="idle" anim="Robo fever0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="Robo fever down0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="Robo fever left0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="Robo fever right0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singUP" anim="Robo fever up0" x="0" y="0" fps="24" loop="false"/>
+</character>

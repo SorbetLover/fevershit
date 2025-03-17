@@ -1,0 +1,13 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="fever/fever_mad" flipX="true" isPlayer="true" icon="bf">
+	<anim name="idle" anim="fever idle0" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="fever down0" x="-20" y="-50" fps="24" loop="false"/>
+	<anim name="singDOWNmiss" anim="fever down miss0" x="30" y="-50" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="fever right0" x="-60" y="-20" fps="24" loop="false"/>
+	<anim name="singLEFTmiss" anim="fever left miss0" x="-20" y="-5" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="fever left0" x="25" y="-5" fps="24" loop="false"/>
+	<anim name="singRIGHTmiss" anim="fever right miss0" x="20" y="-25" fps="24" loop="false"/>
+	<anim name="singUP" anim="fever up0" x="-50" y="20" fps="24" loop="false"/>
+	<anim name="singUPmiss" anim="fever up miss0" x="55" y="20" fps="24" loop="false"/>
+	<anim name="fever fall" anim="fever fall0" x="-13" y="5" fps="24" loop="false"/>
+</character>
