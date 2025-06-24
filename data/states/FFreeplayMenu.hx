@@ -4,6 +4,7 @@ import haxe.Json;
 import sys.io.File;
 import funkin.backend.assets.ModsFolder;
 
+import funkin.backend.chart.Chart;
 import flixel.groups.FlxSpriteGroup;
 
 import flixel.text.FlxTextAlign;
@@ -530,14 +531,17 @@ function update(elapsed){
 	}
 	if(FlxG.keys.justPressed.ALT && lastSelected != curSelected){
 		lastSelected = curSelected;
+		// if(songlist.contains(songGRP.members[curSelected].text.toLowerCase())) 
+		// FlxG.sound.playMusic(Paths.inst(songGRP.members[curSelected].text.toLowerCase()));
+		// // trace(Json.parse(ModsFolder.currentModFolder + "/songs/" + songGRP.members[curSelected].text.toLowerCase() + "/meta.json" ));]
+		// // Conductor.changeBPM(File.getContent(ModsFolder.currentModFolder + "/songs/" + cursong + "/bpm.txt"));
+		// Conductor.changeBPM(File.getContent('mods/' + ModsFolder.currentModFolder + '/songs/'+ cursong + '/bpm.txt'));
+		// trace("Bpm set to " + Conductor.bpm);
 		if(songlist.contains(songGRP.members[curSelected].text.toLowerCase())) 
 		FlxG.sound.playMusic(Paths.inst(songGRP.members[curSelected].text.toLowerCase()));
-		// trace(Json.parse(ModsFolder.currentModFolder + "/songs/" + songGRP.members[curSelected].text.toLowerCase() + "/meta.json" ));]
-		// Conductor.changeBPM(File.getContent(ModsFolder.currentModFolder + "/songs/" + cursong + "/bpm.txt"));
-		Conductor.changeBPM(File.getContent('mods/' + ModsFolder.currentModFolder + '/songs/'+ cursong + '/bpm.txt'));
-		trace("Bpm set to " + Conductor.bpm);
-		
-
+		var merda = Chart.loadChartMeta(songGRP.members[curSelected].text.toLowerCase());
+		Conductor.changeBPM(merda.bpm);
+		trace(merda.name + " " + merda.bpm);
 	}
 
 	uiui.y = 700;
