@@ -2,3 +2,4 @@
 
 # todo
 change the notesplash and the countdown sprites i forgot 
+fix feel the rage camera
