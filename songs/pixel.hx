@@ -22,6 +22,11 @@ function create(){
 	if(!StringTools.endsWith(PlayState.instance.boyfriend.curCharacter, "-pixel")){
 		disableScript();
 	}
+	if(FlxG.save.data.keyCount != 4 && (FlxG.save.data.keyCount != null || FlxG.save.data.keyCount == 0)){
+		enablePauseMenu = false;
+		pixelNotesForBF = false;
+		pixelNotesForDad = false;
+	}
 }
 function onNoteCreation(event) {
 	if (event.note.strumLine == playerStrums && !pixelNotesForBF) return;

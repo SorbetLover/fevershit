@@ -1,6 +1,7 @@
 var peeps:FunkinSprite;
 var classic:FlxSprite;
 var frenzy:FlxSprite;
+var extras:FunkinSprite;
 
 var playingSong;
 var vocals:FlxSound;
@@ -63,6 +64,16 @@ function create(){
 	frenzy.antialiasing = true;
 	add(frenzy);
 
+	extras = new FunkinSprite(500, 560);
+	extras.frames = Paths.getFrames("f/freeplay/extrasbtn");
+	extras.animation.addByPrefix("n", "idle", 0);
+	extras.animation.addByPrefix("s", "selected", 0);
+	add(extras);
+	extras.scale.set(0.7,0.7);
+	for(ooo in [classic, frenzy]){
+		ooo.y -= 10;
+	}
+
 	for(eee in members){
 		eee.antialiasing = true;
 	}
@@ -71,29 +82,50 @@ function create(){
 function beatHit(){
 	if(curBeat % 2 ==  0)peeps.playAnim("peep");
 }
-var sel:Bool = true;
+var sel:Int = 0;
 var canInteract:Bool = true;
 function update(){
 	canInteract = !FlxG.save.data.INSS;
 	if(canInteract == true){
 
-		if(FlxG.keys.justPressed.A || FlxG.keys.justPressed.D){
-			sel = !sel;
+		// if(FlxG.keys.justPressed.A || FlxG.keys.justPressed.D){
+		// 	// sel = !sel;
+		// }
+		if(FlxG.keys.justPressed.A) sel -= 1;
+		if(FlxG.keys.justPressed.D) sel += 1;
+		if(FlxG.keys.justPressed.S) sel = 2;
+		if(FlxG.keys.justPressed.W) sel = 0;
+		if(sel >= 3){
+			sel = 0;
+		}
+		if(sel < 0){
+			sel = 2;
 		}
 		switch(sel){
-			case false:
+			case 0:
 				classic.animation.play("s", false);
 				frenzy.animation.play("n", false);
-				
+				extras.animation.play("n", false);
+
 				FlxG.save.data.Fmenu = false;
-			case true:
+			case 1:
 				classic.animation.play("n", false);
 				frenzy.animation.play("s", false);
+				extras.animation.play("n", false);
+
 				FlxG.save.data.Fmenu = true;
+			case 2:
+				classic.animation.play("n", false);
+				frenzy.animation.play("n", false);
+				extras.animation.play("s", false);
 			
 		}
 		if(controls.ACCEPT){
-			openSubState(new ModSubState("FFreeplayMenu"));
+			if(sel != 2){
+				openSubState(new ModSubState("FFreeplayMenu"));
+			} else {
+				openSubState(new ModSubState("FFreeplayExtra"));
+			}
 			canInteract = false;
 			FlxG.save.data.INSS = true; 
 		}
