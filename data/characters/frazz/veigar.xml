@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="frazzbundle/veigar" color="#6365B6">
+	<anim name="idle" anim="Veigar Idle"/>
+	<anim name="singDOWN" anim="Veigar Down" x="-5" y="-46"/>
+	<anim name="singRIGHT" anim="Veigar Right" x="-11" y="-3"/>
+	<anim name="singLEFT" anim="Veigar Left" x="20" y="3"/>
+	<anim name="singUP" anim="Veigar Up" x="11" y="49"/>
+	<anim name="Veigar Anger" anim="Veigar Anger"/>
+</character>

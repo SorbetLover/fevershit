@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="pixel" scale="6" antialiasing="false" icon="robo-pixel">
+	<anim name="idle" anim="RoboFeverIDLE"/>
+	<anim name="singDOWN" anim="RoboFeverDOWN"/>
+	<anim name="singRIGHT" anim="RoboFeverRIGHT"/>
+	<anim name="singLEFT" anim="RoboFeverLEFT"/>
+	<anim name="singUP" anim="RoboFeverUP"/>
+</character>

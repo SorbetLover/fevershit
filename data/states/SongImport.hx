@@ -20,7 +20,7 @@ import funkin.editors.charter.Charter;
 var song:UITextBox;
 var importee:UIButton;
 function postCreate() {
-	song = new UITextBox(100,100, "grando", 300, 30);
+	song = new UITextBox(100,100, "", 300, 30);
 	add(song);
 
 	importee = new UIButton(100,150, "import", function(){
@@ -30,22 +30,24 @@ function postCreate() {
 
 	add(importee);
 }
-function save(sng){
-	file = "Zfrenzy_152/assets/data/" + sng + "/" + sng + "-hard.json";
-	trace(File.getContent(file));
-	if(FileSystem.exists("mods/fevershit/songs/" + sng) == false){
-		FileSystem.createDirectory("mods/fevershit/songs/" + sng); 
-		
-		FileSystem.createDirectory("mods/fevershit/songs/" + sng + "/charts"); 
-		FileSystem.createDirectory("mods/fevershit/songs/" + sng + "/song"); 
-		FileSystem.createDirectory("mods/fevershit/songs/" + sng + "/scripts"); 
-	}
-	// File.saveContent("mods/fevershit/songs/" + sng + "/charts/", file);
-	File.copy("Zfrenzy_152/assets/data/" + sng + "/" + sng + "-hard.json", "mods/fevershit/songs/" + sng + "/charts/hard.json");
-	File.copy("Zfrenzy_152/assets/songs/" + sng + "/Inst.ogg", "mods/fevershit/songs/" + sng + "/song/Inst.ogg");
-	File.copy("Zfrenzy_152/assets/songs/" + sng + "/Voices.ogg", "mods/fevershit/songs/" + sng + "/song/Voices.ogg");
-	// PlayState.loadSong(sng, "hard");
-	FlxG.switchState(new Charter(sng, "hard"));
+function save(sng:String) {
+    var bosta = "C:/Users/umc4r/OneDrive/Documentos/frenzy_152";
+
+    var chartFile = bosta + "/assets/data/" + sng + "/" + sng + "-hard.json";
+    trace(File.getContent(chartFile));
+
+    if (!FileSystem.exists("mods/fevershit/songs/" + sng)) {
+        FileSystem.createDirectory("mods/fevershit/songs/" + sng);
+        FileSystem.createDirectory("mods/fevershit/songs/" + sng + "/charts");
+        FileSystem.createDirectory("mods/fevershit/songs/" + sng + "/song");
+        FileSystem.createDirectory("mods/fevershit/songs/" + sng + "/scripts");
+    }
+
+    File.copy(bosta + "/assets/data/" + sng + "/" + sng + "-hard.json", "mods/fevershit/songs/" + sng + "/charts/hard.json");
+    File.copy(bosta + "/assets/songs/" + sng + "/Inst.ogg", "mods/fevershit/songs/" + sng + "/song/Inst.ogg");
+    File.copy(bosta + "/assets/songs/" + sng + "/Voices.ogg", "mods/fevershit/songs/" + sng + "/song/Voices.ogg");
+
+    FlxG.switchState(new Charter(sng, "hard"));
 }
 
 function update() {

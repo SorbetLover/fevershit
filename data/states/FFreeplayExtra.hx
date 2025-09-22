@@ -8,6 +8,7 @@ import funkin.backend.chart.Chart;
 import flixel.groups.FlxSpriteGroup;
 
 import flixel.text.FlxTextAlign;
+
 var songs = [
 	["gears", "SongOne", "scarlet"],
 	["tranquility", "SongOneelevatedby2", "wrench"],
@@ -51,6 +52,7 @@ function create(){
 		membsY.push(members[i].y);
 	}
 	// trace(membsY);
+	members.angle = 10;
 }
 var selec:Int = 0;
 var songtexts:Array = [];

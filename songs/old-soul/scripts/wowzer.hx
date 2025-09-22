@@ -3,7 +3,12 @@ import funkin.backend.shaders.WiggleEffect;
 import openfl.filters.ShaderFilter;
 
 var wiggleEffect:WiggleEffect;
+var preloadthing:FlxSprite;
 function postCreate(){
+    preloadthing = new FunkinSprite();
+    preloadthing.frames = Paths.getFrames("mechanicShit/paintingShit");
+    add(preloadthing);
+    preloadthing.alpha = 0.001;
     wiggleEffect = new WiggleEffect();
 	wiggleEffect.effectType = WiggleEffectType.WAVY;
 	wiggleEffect.waveAmplitude = 0.05;

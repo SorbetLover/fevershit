@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character icon="taki" color="#D3436F">
+	<anim name="danceLeft" anim="taki bumpin " indices="0..13"/>
+	<anim name="danceRight" anim="taki bumpin " indices="14..30"/>
+</character>
