@@ -39,20 +39,24 @@ function beatHit(curBeat){
 
 	}
 }
-
-function update(){
+var notexs:Array = [[],[]];
+var _jancu = 0;
+function update(elapsed){
+	_jancu += elapsed;
+	if(startingSong == true) return;
 	currentBeat = (songPos / 1000)*(Conductor.bpm/15);
 	var dd = 0;
 	if(PlayState.instance.curSong == "last-meow"){
+		var ehh = 0;
 		for(i in strumLines.members[0].members){
 			dd++;
-			i.x = (i.x+5 * Math.sin((currentBeat + dd*10) * 3.14159));
-			i.y = (i.y+2 * Math.sin((currentBeat + dd*15) * 3.14159));
+			i.x = (notexs[0][ehh]+ (0 + 50 * Math.sin(_jancu * 12)) * Math.sin((currentBeat + dd*10) * 3.14159));
+			i.y = (strumLines.members[1].members[0].y+(0 + 50 *Math.cos(_jancu * 12)) * Math.sin((currentBeat + dd*15) * 3.14159));
+			ehh += 1;
 		}
 		dd = 0;
 	}
 }
-
 function postCreate(){
 	if(dad.curCharacter == "frazz/veigar"){
 		strumLines.members[0].characters[0].x += 500;
@@ -60,4 +64,10 @@ function postCreate(){
 		dad.scale.set(1.2,1.2);
 		dad.cameraOffset = FlxPoint.weak(100,10);
 	}
+	for(i in [0,1]){
+		for(r in 0...strumLines.members[i].length){ 
+			notexs[i].push(strumLines.members[i].members[r].x);
+		}
+	}
+	trace(notexs);
 }
