@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="peakek_assets" camx="400" camy="100" color="#9C9C9C">
+	<anim name="idle" anim="Dad idle dance0" fps="24" loop="true"/>
+	<anim name="singDOWN" anim="Dad Sing Note DOWN0" x="-212" y="-49"/>
+	<anim name="singRIGHT" anim="Dad Sing Note RIGHT0" x="-186" y="12"/>
+	<anim name="singUP" anim="Dad Sing note UP0" x="-151" y="59"/>
+	<anim name="singLEFT" anim="dad sing note LEFT0" x="-14" y="29"/>
+</character>
