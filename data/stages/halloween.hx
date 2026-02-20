@@ -1,12 +1,13 @@
 function beatHit(curBeat){
-	if(PlayState.instance.curSong == "star-baby") switch (curBeat)
+	if(PlayState.instance.curSong == "star-baby") 
+		switch (curBeat)
 					{
 						case 128:
 							defaultCamZoom += 0.17;
 							FlxTween.color(spooky, 0.45, FlxColor.WHITE, FlxColor.fromString("#828282"));
 							FlxTween.color(gf, 0.45, FlxColor.WHITE, FlxColor.fromString("#828282"));
 							// useDirectionalCamera = true;
-								if(dad.curCharacter != "frazz/veigar"){dad.cameraOffset = FlxPoint.weak(100,200);} else { dad.cameraOffset = FlxPoint.weak(0,30);}
+							if(dad.curCharacter != "frazz/veigar"){dad.cameraOffset = FlxPoint.weak(100,200);} else { dad.cameraOffset = FlxPoint.weak(0,30);}
 						case 192:
 							defaultCamZoom -= 0.17;
 							FlxTween.color(spooky, 0.45, FlxColor.fromString("#828282"), FlxColor.WHITE);
@@ -58,11 +59,14 @@ function update(elapsed){
 	}
 }
 function postCreate(){
+
+	FlxG.camera.zoom += (1280 / FlxG.width) / 90;
+	defaultCamZoom = FlxG.camera.zoom;
 	if(dad.curCharacter == "frazz/veigar"){
+		dad.cameraOffset = FlxPoint.weak(100 + ((FlxG.width - 1280) /2),10);
 		strumLines.members[0].characters[0].x += 500;
 		strumLines.members[0].characters[0].y += 600;
 		dad.scale.set(1.2,1.2);
-		dad.cameraOffset = FlxPoint.weak(100,10);
 	}
 	for(i in [0,1]){
 		for(r in 0...strumLines.members[i].length){ 

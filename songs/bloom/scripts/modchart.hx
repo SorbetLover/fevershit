@@ -138,6 +138,12 @@ var ssssss = 1;
 		joinUs.visible = false;
 		// joinUs.antialiasing = true;
 	}
+
+	if(FlxG.width >= 1280){
+		stage.getSprite("clocks").scrollFactor.set(0.4,0.4);
+		stage.getSprite("clocks").x += 90;
+		
+	}
 	
 }
 function postCreate(){
@@ -295,12 +301,14 @@ function stepHit(curStep:Int)
 		defaultCamZoom += 0.2;
 
 		clap.animation.play("clap");
-
-		joinUs.visible = true;
-		joinUs.playAnim("idle");
+		if(joinUs != null){
+			joinUs.visible = true;
+			joinUs.playAnim("idle");
 		if(PlayState.difficulty != "dogs") FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
 			screen.multi = num;
 		});
+
+		}
 	}
 
 	if(curStep == 762){
@@ -308,9 +316,9 @@ function stepHit(curStep:Int)
 		BW.u_colorFactor = -1;
 	}
 	if(curStep == 768){
-		FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
-			screen.multi = num;
-		});
+		// FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
+			// screen.multi = num;
+		// });
 		joinUs.visible = false;
 		gifspr.alpha = 1;
 		

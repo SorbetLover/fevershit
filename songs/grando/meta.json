@@ -1,15 +1,15 @@
 {
 	"opponentModeAllowed": false,
 	"difficulties": [
-		"HARD"
+		"HARD",
+		"alt"
 	],
 	"icon": "face",
-	"parsedColor": -7179779,
+	"color": "#9271FD",
 	"coopAllowed": false,
 	"stepsPerBeat": 4,
 	"displayName": "grando",
 	"needsVoices": true,
 	"beatsPerMeasure": 4,
-	"bpm": 160,
-	"name": "grando"
+	"bpm": 160
 }

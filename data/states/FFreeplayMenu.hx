@@ -430,6 +430,7 @@ var curSelected:Int = 0;
 var lastSelected = 0;
 var cursong:String;
 function update(elapsed){
+	if(songGRP.members[curSelected] == null) curSelected = curSelected - 1;
 	cursong = songGRP.members[curSelected].text.toLowerCase();
 	// offs += FlxG.mouse.wheel * 100;
 	// if(finishedAnim == false){	offs = ofsobj.y;}
@@ -546,5 +547,8 @@ function update(elapsed){
 
 	uiui.y = 700;
 	uiui.x = 0;
+
+	curSelected = FlxMath.bound(curSelected, 0, songGRP.members.length - 1);
+
 }
 
