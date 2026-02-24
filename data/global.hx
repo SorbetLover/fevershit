@@ -1,3 +1,4 @@
+#if !android 
 var redirectStates:Map<FlxState, String> = [
     TitleState => "FTitle",
     MainMenuState => "FMenu",
@@ -9,3 +10,4 @@ function preStateSwitch() {
         if (Std.isOfType(FlxG.game._requestedState, redirectState))
             FlxG.game._requestedState = new ModState(redirectStates.get(redirectState));
 }
+#end

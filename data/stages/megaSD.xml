@@ -9,4 +9,5 @@
 	<gf x="125" y="0" scroll="1"/>
 	<bf x="601" camxoffset="-200" y="-212" camyoffset="-50" lastPlayer="bf-pixel"/>
 	<dad x="-306" camxoffset="100" y="-150" camyoffset="-30" lastOpponent="mega"/>
+	<character name="robo-pixel" x="-400" y="100"/>
 </stage>
