@@ -79,17 +79,10 @@ function create()
 	
 	BW = new CustomShader("BWShader");
 	BW.u_colorFactor = 0;
-
+	stage.getSprite("clocks").shader = BW;
 
 	screen = new CustomShader("camDupe");
 	screen.multi = 1;
-	// insert(members.indexOf(gf), clap);
-	// insert(members.indexOf(gf), spr);
-	// insert(members.indexOf(gf), spr2);
-// FlxG.camera.addShader(BW);
-	// FlxG.camera.addShader(screen);
-	// camHUD.addShader(screen);
-	// camHUD.addShader()
 
 		wigouwigouwigou = new WiggleEffect();
 		wigouwigouwigou.effectType = WiggleEffectType.DREAMY;
@@ -97,27 +90,9 @@ function create()
 		wigouwigouwigou.waveFrequency = 2;
 		wigouwigouwigou.waveSpeed = 1;
 
-var ssssss = 1;
+	var ssssss = 1;
 	if(PlayState.difficulty == "dogs"){
 		
-		// for(i in [d1,d2,d3,d4,d5,d6]){
-			// 	i = new FunkinSprite();
-			// 	i.frames = Paths.getSparrowAtlas("dedsec/dedsecgif" + ssssss);
-			// 	i.animation.addByPrefix("idle", "idle", 12, true);
-			// 	i.playAnim("idle");
-			// 	// add(i);
-			// 	insert(members.indexOf(dad) + 1, i );
-			// 	// i.cameras = [camHUD];
-			// 	ssssss += 1;
-			// 	i.visible = false;
-			// 	i.scrollFactor.set(0,0);
-			// 	i.x += 500;
-			// 	i.y += 200;
-			// 	i.alpha = 0;
-			// 	if(FlxG.random.bool(40)){
-			// 		i.alpha = 1;
-			// 	}
-			// }
 		gifspr = new FunkinSprite();
 		gifspr.frames = Paths.getSparrowAtlas("dedsec/dedsecgif" + FlxG.random.int(1,6));
 		gifspr.animation.addByPrefix("idle", "idle", 12, true);
@@ -136,7 +111,6 @@ var ssssss = 1;
 		joinUs.setGraphicSize(FlxG.width, FlxG.height);
 		joinUs.screenCenter();
 		joinUs.visible = false;
-		// joinUs.antialiasing = true;
 	}
 
 	if(FlxG.width >= 1280){
@@ -147,8 +121,6 @@ var ssssss = 1;
 	
 }
 function postCreate(){
-	// insert(members.indexOf(strumLines.members[0].members[0]) + 1, spr);
-	// insert(members.indexOf(strumLines.members[0].members[0]), spr2);
 	spr.cameras = [camHUD];
 	spr2.cameras = [camHUD];
 
@@ -176,16 +148,20 @@ var uh:Float = 1;
 function postUpdate(elapsed:Float)
 {
 	// camGame.zoom = 0.5;
+
+	if(disableCamera){
+		camZooming = false;
+		camGame.zoom = 0.7;
+	}
 	wigouwigouwigou.update(elapsed * 5);
-	BW.u_colorFactor = uh;
+	// BW.u_colorFactor = uh;
 	if (curBeat >= 192 && curBeat <= 255)
 	{
-		// PlayState.songPosBar = prevTime;
 		iconP1.scale.set(1, 1);
 		iconP2.scale.set(1, 1);
 		scoreTxt.scale.set(1, 1);
-		scoreTxt.text = prevScore;
-		health = prevHealth;
+		// scoreTxt.text = prevScore;
+		// health = prevHealth;
 		scoreTxt.x = (FlxG.width / 2) - (scoreTxt.width / 2);
 	}
 	else if (curBeat == 256 && !fireOnce)
@@ -201,7 +177,7 @@ function changegif(){
 		changegif();
 		return;
 	}
-	curdsc = asd;
+		curdsc = asd;
 		gifspr.frames = Paths.getSparrowAtlas("dedsec/dedsecgif" + asd);
 		gifspr.animation.addByPrefix("idle", "idle", 12, true);
 		gifspr.playAnim("idle");
@@ -209,7 +185,7 @@ function changegif(){
 function beatHit(curBeat)
 {
 	if(curBeat % 4 == 0){
-		changegif();
+		if(gifspr != null) changegif();
 	}
 	if (curBeat < 192 && curBeat > 256)
 	{
@@ -221,10 +197,10 @@ function beatHit(curBeat)
 
 	if (curBeat == 191)
 	{
-		clap.shader = BW.shader;
-		spr.shader = BW.shader;
-		spr2.shader = BW.shader;
 		// FlxTween.tween(BW, {u_colorFactor: 1}, Conductor.crochet / 1000);
+		// clap.shader = BW;
+		// spr.shader = BW.shader;
+		// spr2.shader = BW.shader;
 		FlxTween.num(0, 1, Conductor.crochet / 1000, {ease: FlxEase.linear}, function(uhb:Float):Void{
 			uh = uhb;
 		});
@@ -241,56 +217,33 @@ function beatHit(curBeat)
 		spr2.visible = true;
 		defaultCamZoom += 0.35;
 		camGame.followLerp = 1000;
-		camHUD.addShader(wigouwigouwigou.shader);
-			FlxG.camera.addShader(screen);
-	camHUD.addShader(screen);
+		// camHUD.addShader(wigouwigouwigou.shader);
+		FlxG.camera.addShader(screen);
+		camHUD.addShader(screen);
 
 		// camHUD.setFilters([screen.shader, wigouwigouwigou.shader]);
 		camGame.zoom = FlxG.state.defaultCamZoom;
 
-		// onMoveCamera(true);
-
-		// for (i in 0...4)
-		// 	strumLineNotes[i].alpha = 0.43;
-
-		prevScore = scoreTxt.text;
-		prevHealth = health;
-		prevTime = PlayState.songPosBar;
-
-		// currentTimingShown.alpha = 0;
-		// forceComboPos = new FlxPoint(FlxG.width * 1.5, 0);
 	}
 	else if (curBeat == 256)
 	{
-		// screen.multi = 1;
+		screen.multi = 1;
 		FlxTween.num(screen.multi, 1, Conductor.crochet / 10000, {ease:FlxEase.expoOut}, function(num){
 			screen.multi = num;
 		});
-		// snapCamera(DAD_CAM_POS);
-		// forceComboPos.set(0, 0);
-		FlxTween.tween(spr, {y: -BLACK_BAR_HEIGHT}, 0.24);
+		// FlxTween.tween(spr, {y: -BLACK_BAR_HEIGHT}, 0.24);
 		FlxTween.tween(spr2, {y: FlxG.height}, 0.24);
 		defaultCamZoom -= 0.35;
 		// clocks.shader = 
 		camGame.followLerp = 0.06;
-				gifspr.alpha = 0;
+		gifspr.alpha = 0;
 
-		// getGlobalVar("whittyBG").shader = null;
-
-		// for (i in 0...4)
-		// 	strumLineNotes[i].alpha = 1;
-
-		// for (i in getGlobalVar("bgElements"))
-		// {
-		// 	i.shader = null;
-		// }
-
-		// getGlobalVar("bgElements")[0].shader = getGlobalVar("shader");
 	}
 }
 
 function stepHit(curStep:Int)
 {
+	player.cpu = true;
 	if (curStep == 762)
 	{
 		
@@ -299,29 +252,29 @@ function stepHit(curStep:Int)
 		disableCamera = true;
 		camFollow.x -= 250;
 		defaultCamZoom += 0.2;
-
-		clap.animation.play("clap");
 		if(joinUs != null){
 			joinUs.visible = true;
 			joinUs.playAnim("idle");
-		if(PlayState.difficulty != "dogs") FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
-			screen.multi = num;
-		});
-
+		} else {
+			clap.animation.play("clap");
 		}
+		// if(PlayState.difficulty != "dogs") FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
+		// 	screen.multi = num;
+		// });
 	}
 
 	if(curStep == 762){
 		stage.getSprite("clocks").shader = BW;
-		BW.u_colorFactor = -1;
+		BW.u_colorFactor = 1;
 	}
 	if(curStep == 768){
 		// FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
 			// screen.multi = num;
 		// });
-		joinUs.visible = false;
-		gifspr.alpha = 1;
-		
+		if(gifspr != null) {
+			joinUs.visible = false;
+			gifspr.alpha = 1;
+		}
 	}
 }
 
