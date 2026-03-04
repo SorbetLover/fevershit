@@ -228,11 +228,13 @@ function create(){
     pbf.y += 200;
     pbf.x += 300;
 
+    #if linux || android
     chroma = new CustomShader("chromaticAberration");
     camGame.addShader(chroma);
     chroma.blueOff = [0,0];
     chroma.redOff = [0,0];
     chroma.greemOff = [0,0];
+    #end    
 }
 function postCreate() {
     camHUD.visible = false;
@@ -244,6 +246,7 @@ function postCreate() {
 }   
 
 function set_cho(cff){
+    #if linux || android
     if(cff == true){
         chroma.redOff[0] = 0.0065;
         chroma.blueOff[0] = -0.0065;
@@ -252,6 +255,7 @@ function set_cho(cff){
         chroma.blueOff[0] = 0;
         
     }
+    #end
 }
 function switchStage(name:String = "default"){
     xablau();
@@ -477,3 +481,4 @@ function postUpdate(){
     }
 
 }
+			
