@@ -131,7 +131,10 @@ function stepHit(curStep){
 			
 			}
 			if(curStep == 762){
-				clocks.colorTransform.color = 0xFF040504;
+				if(PlayState.instance.curDifficulty == "dogs"){
+
+					clocks.colorTransform.color = 0xFF000000;
+				}
 			}
 	
 		case "crack":
