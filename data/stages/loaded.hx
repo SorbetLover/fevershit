@@ -456,7 +456,6 @@ function beatHit(){
 }
 
 function postUpdate(){
-    player.cpu = true;
     // inst.pause() ;
     // vocals.pause();
 
