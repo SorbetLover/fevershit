@@ -7,6 +7,7 @@ import funkin.backend.shaders.WiggleEffect;
 import openfl.filters.ShaderFilter;
 import funkin.editors.charter.Charter;
 import flixel.group.FlxSpriteGroup;
+import openfl.display.BlendMode;
 var BLACK_BAR_HEIGHT:Int = 115;
 var spr:FlxSprite;
 var spr2:FlxSprite;
@@ -68,11 +69,11 @@ function create()
 	
 
 	
-	spr = new FlxSprite(0, 0).makeGraphic(1280, BLACK_BAR_HEIGHT, FlxColor.BLACK);
+	spr = new FlxSprite(0, 0).makeGraphic(FlxG.width, BLACK_BAR_HEIGHT, FlxColor.BLACK);
 	add(spr);
 	spr.visible = false;
 
-	spr2 = new FlxSprite(0, FlxG.height - BLACK_BAR_HEIGHT).makeGraphic(1280, BLACK_BAR_HEIGHT, FlxColor.BLACK);
+	spr2 = new FlxSprite(0, FlxG.height - BLACK_BAR_HEIGHT).makeGraphic(FlxG.width, BLACK_BAR_HEIGHT, FlxColor.BLACK);
 	add(spr2);
 	spr2.visible = false;
 
@@ -102,7 +103,7 @@ function create()
 					gifspr.x += 450;
 
 					gifspr.alpha = 0;
-
+		// gifspr.blend = BlendMode.DIFFERENCE;
 		joinUs = new FunkinSprite();
 		joinUs.frames = Paths.getSparrowAtlas("dedsec/joinUs");
 		add(joinUs);
@@ -137,14 +138,16 @@ function postCreate(){
 		stage.getSprite("alleyway").y += 50;	
 	}
 	
+	stage.getSprite("clocks").shader = wigouwigouwigou.shader;
 
 }
 var prevDad:Bool = true;
 
-
+var disableCamera:Bool = false;
 var fireOnce:Bool = false;
 var uh:Float = 1;
-
+var timePaused = false;
+var wigouspeed = 3;
 function postUpdate(elapsed:Float)
 {
 	// camGame.zoom = 0.5;
@@ -152,12 +155,35 @@ function postUpdate(elapsed:Float)
 	if(disableCamera){
 		camZooming = false;
 		camGame.zoom = 0.7;
+
+		camFollow.setPosition(300, 300);
+        FlxG.camera.focusOn(camFollow.getPosition());
+	} 
+	if(timePaused == false){
+		camHUDZoomMult = 0.02;
+		camGameZoomMult = 0.02;
+				strumLines.members[1].characters[0].alpha = 1;
+				strumLines.members[0].characters[0].alpha = 1;
+		camGameZoomMult = 0;
+	} else {
+		switch(curCameraTarget){
+			case 0:
+				strumLines.members[1].characters[0].alpha = 0;
+				strumLines.members[0].characters[0].alpha = 1;
+			case 1:
+				strumLines.members[1].characters[0].alpha = 1;
+				strumLines.members[0].characters[0].alpha = 0;
+		}
+		camHUDZoomMult = 0;
+
 	}
-	wigouwigouwigou.update(elapsed * 5);
+	wigouwigouwigou.update(elapsed * wigouspeed);
 	// BW.u_colorFactor = uh;
+		doIconBop = true;
 	if (curBeat >= 192 && curBeat <= 255)
 	{
 		iconP1.scale.set(1, 1);
+		doIconBop = false;
 		iconP2.scale.set(1, 1);
 		scoreTxt.scale.set(1, 1);
 		// scoreTxt.text = prevScore;
@@ -184,6 +210,10 @@ function changegif(){
 }
 function beatHit(curBeat)
 {
+
+	if(curBeat == 320){
+		wigouspeed = 2;
+	}
 	if(curBeat % 4 == 0){
 		if(gifspr != null) changegif();
 	}
@@ -231,12 +261,14 @@ function beatHit(curBeat)
 		FlxTween.num(screen.multi, 1, Conductor.crochet / 10000, {ease:FlxEase.expoOut}, function(num){
 			screen.multi = num;
 		});
-		// FlxTween.tween(spr, {y: -BLACK_BAR_HEIGHT}, 0.24);
+		FlxTween.tween(spr, {y: -BLACK_BAR_HEIGHT}, 0.24);
 		FlxTween.tween(spr2, {y: FlxG.height}, 0.24);
+		timePaused = false;
 		defaultCamZoom -= 0.35;
-		// clocks.shader = 
+		stage.getSprite("clocks").shader = wigouwigouwigou.shader;
 		camGame.followLerp = 0.06;
 		gifspr.alpha = 0;
+		stage.colorTransform.color = null;
 
 	}
 }
@@ -263,9 +295,16 @@ function stepHit(curStep:Int)
 		// });
 	}
 
-	if(curStep == 762){
-		stage.getSprite("clocks").shader = BW;
-		BW.u_colorFactor = 1;
+	if(curStep == 768){
+		trace(PlayState.difficulty);
+		if(PlayState.difficulty != "dogs"){
+			stage.getSprite("clocks").shader = BW;
+			BW.u_colorFactor = 1;
+		} else {
+			stage.getSprite("clocks").shader = null;
+			stage.getSprite("clocks").colorTransform.color = 0xFF000000;
+		}
+		timePaused = true;
 	}
 	if(curStep == 768){
 		// FlxTween.num(1, 2, Conductor.crochet / 500, {ease:FlxEase.expoOut}, function(num){
@@ -273,7 +312,7 @@ function stepHit(curStep:Int)
 		// });
 		if(gifspr != null) {
 			joinUs.visible = false;
-			gifspr.alpha = 1;
+			gifspr.alpha =1;
 		}
 	}
 }

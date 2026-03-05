@@ -55,11 +55,11 @@ function create(){
 		clockFever.antialiasing = true;
 		clockFever.visible = false;
 
-		wiggleEffect = new WiggleEffect();
-		wiggleEffect.effectType = WiggleEffectType.DREAMY;
-		wiggleEffect.waveAmplitude = 0.05;
-		wiggleEffect.waveFrequency = 2;
-		wiggleEffect.waveSpeed = 1;
+		// wiggleEffect = new WiggleEffect();
+		// wiggleEffect.effectType = WiggleEffectType.DREAMY;
+		// wiggleEffect.waveAmplitude = 0.05;
+		// wiggleEffect.waveFrequency = 2;
+		// wiggleEffect.waveSpeed = 1;
 
 		// clockFever.visible = true;
 		// clockScar.visible = true;
@@ -72,8 +72,11 @@ function create(){
 		// add(clocks);
 		// add(clockScar);
 		// add(clockFever);
-		for(ee in [clocks, clockScar, clockFever]){ insert(members.indexOf(boyfriend), ee); if(ee == clocks) ee.shader = wiggleEffect.shader;} 
-		
+		for(ee in [clocks, clockScar, clockFever]){ insert(members.indexOf(boyfriend), ee);} 
+		if(FlxG.width != 1280){
+			clocks.scale.set(2.6,2.6);
+			clocks.scrollFactor.set(0.8,0.8);
+		}
 	}
 	if(PlayState.instance.curSong == "crack"){
 		strumLines.members[0].characters[1].alpha = 0;
@@ -85,7 +88,6 @@ function create(){
 	}
 	
 			clocks.visible = false;
-		
 }
 
 function postCreate(){
@@ -98,7 +100,7 @@ function postCreate(){
 }
 function update(elapsed){
 	if(PlayState.instance.curSong == "bloom"){
-		wiggleEffect.update(elapsed);
+		// wiggleEffect.update(elapsed);
 	}
 	
 }
@@ -148,8 +150,8 @@ function stepHit(curStep){
 
 }
 
-function beatHit(){
-	if(curBeat == 256 && PlayState.instance.curSong.toLowerCase() == "bloom"){
-		clocks.shader = wiggleEffect.shader;
-	}
-}
+// function beatHit(){
+// 	if(curBeat <= 256 && PlayState.instance.curSong.toLowerCase() == "bloom"){
+// 		clocks.shader = wiggleEffect.shader;
+// 	}
+// }
