@@ -28,9 +28,15 @@ function postCreate(){
 var _elapsed = 0;
 var strumOFF = 0;
 var coolPart = false;
+var targoff = 0;
+var targspd = 0.05;
 function postUpdate(elapsed){
     _elapsed += elapsed;
-    strumOFF = FlxMath.lerp(strumOFF, 0, 0.05);
+    strumOFF = FlxMath.lerp(strumOFF, targoff, targspd);
+    if(hm ? (targoff - 50 <= strumOFF) : (targoff + 50 >= strumOFF) ){
+        targoff = 0;
+        targspd = 1;
+    }
     // trace(strumOFF);
     if(!startingSong && !coolPart) for(i in 0...4){
         strumLines.members[0].members[i].x = strumX[i] + 25 * Math.sin(_elapsed * 10);
@@ -76,10 +82,13 @@ function stepHit(curStep){
         curStep == 2268 ||
         curStep == 2284
     ){
+        targspd = 0.05;
         switch(hm){
             case false:
+                targoff = 200;
                 strumOFF = -200;
             default:
+                targoff = -200;
                 strumOFF = 200;
         }
         hm = !hm;

@@ -10,8 +10,8 @@ function postCreate(){
 }
 
 function beatHit(curBeat){
-    __cancelDefault = true;
-    Conductor.changeBPM(100);
+    // __cancelDefault = true;
+    Conductor.changeBPM(70);
     if(curBeat % 2 == 0){
         character.playAnim("deathLoop", true);
     }
