@@ -41,6 +41,7 @@ function onNoteHit(e){
 function onNoteCreation(e){
     if(e.noteType == "hallow"){
         e.note.extra.set("animPlayed", false);
+        e.note.extra.set("isHallow", true);
     }
 }
 function update(elapsed){

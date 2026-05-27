@@ -1,7 +1,7 @@
 <!DOCTYPE codename-engine-character>
 <character y="350" sprite="demon_fever_assets" flipX="true" camx="-100" isPlayer="true" icon="bf-demon" color="#FD6EFC">
 	<anim name="idle" anim="fever idle0" x="0" y="0" fps="24" loop="false"/>
-	<anim name="fever dodge" anim="fever dodge0" x="25" y="0" fps="24" loop="false"/>
+	<anim name="fever dodge" anim="fever dodge0" x="25" y="0" fps="24" loop="false" indices="0,1,2,3,4,5,6,7,8,9,10,11,12,13,13,13,13,13"/>
 	<anim name="singDOWN" anim="fever down0" x="30" y="-75" fps="24" loop="false"/>
 	<anim name="singDOWNmiss" anim="fever down miss0" x="35" y="-80" fps="24" loop="false"/>
 	<anim name="fever fear" anim="fever fear0" x="0" y="0" fps="24" loop="false"/>

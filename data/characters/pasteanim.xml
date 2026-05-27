@@ -1,0 +1,5 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="paste/paste_anims" color="#F7F7FF" holdTime="6.1">
+	<anim name="smash" anim="toothpaste smash" x="317" y="374"/>
+	<anim name="parry" anim="toothpaste parry" x="-150" y="200"/>
+</character>

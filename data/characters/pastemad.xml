@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="paste/pasteMad" icon="paste" color="#4B4747" holdTime="6.1">
+	<anim name="idle" anim="toothpaste mad idle0" y="-2"/>
+	<anim name="singDOWN" anim="toothpaste mad down0" x="-205" y="-215"/>
+	<anim name="singLEFT" anim="toothpaste mad left0" x="-115" y="52"/>
+	<anim name="singRIGHT" anim="toothpaste mad right0" x="-134" y="-16"/>
+	<anim name="singUP" anim="toothpaste mad up0" x="-182" y="242"/>
+	<anim name="scream" anim="toothpaste mad scream" x="-152" y="52"/>
+</character>

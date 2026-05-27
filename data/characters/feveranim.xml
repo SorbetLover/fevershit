@@ -1,0 +1,4 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="fever/Fever_paste_anims" icon="feveranim" color="#F7F7FF" holdTime="6.1">
+	<anim name="parry" anim="fever parry"/>
+</character>

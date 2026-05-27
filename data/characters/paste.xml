@@ -1,0 +1,9 @@
+<!DOCTYPE codename-engine-character>
+<character sprite="paste/paste" color="#F7F7FF" holdTime="6.1">
+	<anim name="idle" anim="Toothpaste idle"/>
+	<anim name="singDOWN" anim="Toothpaste down"/>
+	<anim name="singLEFT" anim="Toothpaste left0"/>
+	<anim name="singRIGHT" anim="Toothpaste right0" x="-7" y="8"/>
+	<anim name="singUP" anim="Toothpaste up0" y="30"/>
+	<anim name="transition" anim="Toothpaste transition0" x="71" y="100"/>
+</character>
