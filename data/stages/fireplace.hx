@@ -306,6 +306,7 @@ function mbeat(curBeat){
                 pastem.visible = true;
                 otherpaste.visible = false;
                 dodging = false;
+                perfectpress = false;
         }
         mecelap++;
     }
